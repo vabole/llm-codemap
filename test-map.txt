@@ -1,0 +1,13 @@
+file: src/index.ts
+
+const program: Command;
+const options: OptionValues;
+const tsconfigPath: string;
+const configFile: { config?: any; error?: Diagnostic | undefined; };
+const config: ParsedCommandLine;
+const tsProgram: Program;
+const checker: TypeChecker;
+const printer: Printer;
+const map: { [file: string]: string[]; };
+const mapString: string;
+
