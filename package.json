@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "prepare": "npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -15,12 +16,22 @@
     "typescript": "^5.7.3"
   },
   "bin": {
-    "codemap": "./dist/index.js"
+    "codemap": "dist/index.js"
   },
   "files": [
     "dist"
   ],
   "devDependencies": {
     "@types/node": "^22.13.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vabole/llm-codemap.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vabole/llm-codemap/issues"
+  },
+  "homepage": "https://github.com/vabole/llm-codemap#readme"
 }

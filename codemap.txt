@@ -1,0 +1,73 @@
+<file_map>
+src
+  cli.ts
+  formatter.ts
+  extractor.ts
+  programSetup.ts
+  output.ts
+  index.ts
+
+
+<Complete Definitions>
+Path: src/cli.ts
+
+---
+
+Functions:
+  - function parseCLIArgs(): OptionValues
+
+---
+
+Path: src/formatter.ts
+
+---
+
+Functions:
+  - function formatClass(node: ClassDeclaration, checker: TypeChecker): string
+  - function formatInterface(node: InterfaceDeclaration, checker: TypeChecker): string
+  - function formatTypeAlias(node: TypeAliasDeclaration, checker: TypeChecker): string
+  - function formatFunction(node: FunctionDeclaration, checker: TypeChecker): string
+  - function formatEnum(node: EnumDeclaration): string
+  - function formatVariable(decl: VariableDeclaration, checker: TypeChecker): string
+
+---
+
+Path: src/extractor.ts
+
+---
+
+Functions:
+  - function extractDeclarations(sourceFile: SourceFile, checker: TypeChecker): { classes: string[]; interfaces: string[]; types: string[]; functions: string[]; enums: string[]; variables: string[]; }
+
+---
+
+Path: src/programSetup.ts
+
+---
+
+Functions:
+  - function setupTypeScriptProgram(): { program: Program; checker: TypeChecker; }
+
+---
+
+Path: src/output.ts
+
+---
+
+Functions:
+  - function generateCodemap(program: Program, checker: TypeChecker): string
+  - function generateFileTree(sourceFiles: SourceFile[]): string
+  - function writeOutput(outputFile: string, content: string): void
+
+---
+
+Path: src/index.ts
+
+---
+
+Variables:
+  - const options: OptionValues
+
+---
+
+</file_map>
