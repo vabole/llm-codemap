@@ -51,12 +51,21 @@ function generateFileTree(sourceFiles: ts.SourceFile[]): string {
     }
   }
 
-  function printTree(node: any, indent: string = ''): string {
+  function printTree(node: any, prefix: string = ''): string {
     let result = '';
-    for (const [key, value] of Object.entries(node)) {
-      result += `${indent}${key}\n`;
-      if (value && typeof value === 'object') result += printTree(value, indent + '  ');
-    }
+    const entries = Object.entries(node);
+    
+    entries.forEach(([key, value], index) => {
+      const isLast = index === entries.length - 1;
+      const connector = isLast ? '└──' : '├──';
+      const childPrefix = isLast ? prefix + '    ' : prefix + '│   ';
+      
+      result += `${prefix}${connector} ${key}\n`;
+      if (value && typeof value === 'object') {
+        result += printTree(value, childPrefix);
+      }
+    });
+    
     return result;
   }
 
