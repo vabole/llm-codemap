@@ -1,0 +1,29 @@
+# Source
+src/
+
+# Tests
+__tests__
+*.test.ts
+*.spec.ts
+coverage/
+
+# Config files
+.versionrc.json
+jest.config.js
+tsconfig.json
+.gitignore
+.npmignore
+
+# Development files
+*.log
+.DS_Store
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
+.github/ 
